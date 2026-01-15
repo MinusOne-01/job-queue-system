@@ -1,7 +1,10 @@
 {
   "scripts": {
     "dev": "nodemon src/server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "worker": "node src/workers/job.worker.js",
+    "cleanup": "node src/workers/cleanup.worker.js",
+    "seedjobs": "node src/utils/seedJobs.js"
   },
   "dependencies": {
     "@prisma/client": "^6.19.2",
