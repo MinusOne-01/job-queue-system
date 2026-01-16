@@ -34,7 +34,7 @@ export async function fetchJobInfo_db( id ){
 export async function fetchJobLogs_db( id ){
 
     return await prisma.jobLogs.findMany({
-        where: { id },
+        where: { jobId: id },
         orderBy: { createdAt: "asc" }
     });
 

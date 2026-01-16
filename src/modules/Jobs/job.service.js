@@ -61,10 +61,8 @@ export async function fetchJobInfo( id ){
 
 export async function fetchJobLogs( id ){
     try{
-
-        const item = await fetchJobLogs_db( id );
-
-        return item;
+        const items = await fetchJobLogs_db( id );
+        return items;
 
     }
     catch(error){

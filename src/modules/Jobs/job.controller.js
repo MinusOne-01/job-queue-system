@@ -72,7 +72,7 @@ export async function getJobLogs(req, res, next){
         const jobLogs = await fetchJobLogs( id );
 
         if(jobLogs.length === 0){
-            res.json({ Job_Logs: "No logs available" });
+            return res.json({ Job_Logs: "No logs available" });
         }
 
         res.json({ Job_Logs: jobLogs });
